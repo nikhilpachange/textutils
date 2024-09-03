@@ -2,14 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 import About from './components/about';
 import Navbar from './components/Navbar'
-// import Textform from './components/Textform'
+import { useState } from 'react';
+import Textform from './components/Textform'
 
 function App() {
+const [Mode, setMode] = useState('light');
   return (
     <>
-    <Navbar  title="textutils" aboutText="about textutils"/>
+    <Navbar  title="textutils" mode={Mode} aboutText="about textutils"/>
     <div className="container">
-    {/* <Textform heading="inter the text to analyze"/> */}
+    <Textform heading="inter the text to analyze"/>
     <About/>
     </div>
 
